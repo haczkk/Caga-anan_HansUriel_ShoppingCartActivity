@@ -5,11 +5,11 @@ class Product
     public int Id;
     public string Name;
     public double Price;
-    public int Stock;
+    public int RemainingStock;
 
     public void DisplayProduct()
     {
-        Console.WriteLine($"ID Number:{Id} | {Name} - {Price} (Stock: {Stock})");
+        Console.WriteLine($"ID Number:{Id} | {Name} - {Price} (Stock: {RemainingStock})");
     }
 
     public double GetItemTotal(int quantity)
@@ -24,6 +24,6 @@ class Product
 
     public void DeductStock(int quantity)
     {
-        Stock -= quantity;
+        RemainingStock -= quantity;
     }
 }
