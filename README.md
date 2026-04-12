@@ -3,7 +3,9 @@
 Progress:
 
 • Completed the requirements for the project (Product class, Fields, and Methods).
+
 • Used Properties instead of Fields.
+
 • Used a constructor for ease of data storing.
 
 AI Usage in This Project:
