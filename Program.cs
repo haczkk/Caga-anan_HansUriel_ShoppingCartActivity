@@ -83,5 +83,85 @@ class Program
         int maxCart = 5;
         CartItem[] cart =  new CartItem[maxCart];
         int cartCount = 0;
+
+        string continueShopping = "Y";
+
+        while (continueShopping == "Y")
+        {
+            Console.Clear();
+            Console.WriteLine("======== Shopping Cart System ======");
+
+            for (int i = 0; i < menu.Length; i++)
+            {
+                menu[i].DisplayProduct();
+            }
+
+            Console.WriteLine("====================================");
+
+            if (cartCount == maxCart)
+            {
+                Console.WriteLine("Cart is full. Proceeding to checkout...");
+                break;
+            }
+
+            Console.Write("\nEnter product number (or 0 to checkout): ");
+            string productInput = Console.ReadLine();
+
+            int productId;
+            bool productIsValid = int.TryParse(productInput, out productId);
+
+            if (productIsValid == false)
+            {
+                Console.WriteLine("Invalid Input. Please enter a number.");
+                Console.WriteLine("Press any key to try again...");
+                Console.ReadKey();
+                continue;
+            }
+
+            if (productId == 0)
+            {
+                break;
+            }
+
+            if (productId < 1 || productId > menu.Length)
+            {
+                Console.WriteLine("Invalid Product Number. Please choose from 1 to " + menu.Length + ".");
+                Console.WriteLine("Press any key to try again...");
+                Console.ReadKey();
+                continue;
+            }
+
+            Product selectedProduct = menu[productId - 1];
+
+            if (selectedProduct.RemainingStock == 0)
+            {
+                Console.WriteLine("Sorry, '" + selectedProduct.Name + "' is out of stock.");
+                Console.WriteLine("Press any key to try again...");
+                Console.ReadKey();
+                continue;
+            }
+
+            Console.Write("Enter quantity for " + selectedProduct.Name + ": ");
+            string quantityInput = Console.ReadLine();
+
+            int  quantity;
+            bool quantityIsValid = int.TryParse(quantityInput, out quantity);
+
+            if (quantityIsValid == false)
+            {	
+                Console.WriteLine("Invalid input. Please enter a whole number.");
+                Console.WriteLine("Press any key to try again...");
+                Console.ReadKey();
+                continue;
+            }
+
+            if (quantity <= 0)
+            {
+                Console.WriteLine("Quantity must be at least 1.");
+                Console.WriteLine("Press any key to try again...");
+                Console.ReadKey();
+                continue;
+            }
+        }
     }
 }
