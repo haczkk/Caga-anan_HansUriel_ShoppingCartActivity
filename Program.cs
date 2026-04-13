@@ -17,6 +17,8 @@ class Product
 
     public void DisplayProduct()
     {
+        string stockInfo;
+        
         if (RemainingStock == 0)
         {
             stockInfo = "[OUT OF STOCK]";
