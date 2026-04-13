@@ -182,7 +182,7 @@ class Program
            }
            else
            {
-               totalQuantityWanted = 0;
+               totalQuantityWanted = quantity;
            }
 
            if (selectedProduct.HasEnoughStock(totalQuantityWanted) == false)
