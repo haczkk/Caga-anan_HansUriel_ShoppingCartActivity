@@ -30,6 +30,10 @@
 
 • Shopping Cart System Finished.
 
+# Problem
+
+• Encountered a problem with negative stocks.
+
 # Ai Usage in This Project
 
 • “Why am I getting an error with my variable not being declared?"
