@@ -28,7 +28,7 @@ class Product
             stockInfo = "Stock: " + RemainingStock;
         }
 
-        Console.WriteLine("[" + Id + "] " + Name + "\t PHP" + Price.ToString("F2") + "\t " + stockInfo);
+        Console.WriteLine("[" + Id + "] " + Name.PadRight(12) + "PHP " + Price.ToString("F2").PadRight(12) + stockInfo);
     }
 
     public double GetItemTotal(int quantity)
@@ -89,14 +89,14 @@ class Program
         while (continueShopping == "Y")
         {
             Console.Clear();
-            Console.WriteLine("======== Shopping Cart System ======");
+            Console.WriteLine("=========== Shopping Cart System ============");
 
             for (int i = 0; i < menu.Length; i++)
             {
                 menu[i].DisplayProduct();
             }
 
-            Console.WriteLine("====================================");
+            Console.WriteLine("=============================================");
 
             if (cartCount == maxCart)
             {
@@ -215,12 +215,12 @@ class Program
         }
 
         Console.Clear();
-        Console.WriteLine("======== Receipt ======");
+        Console.WriteLine("====================== Receipt =========================");
 
         if (cartCount == 0)
         {
             Console.WriteLine("Your cart is empty. No purchase was made.");
-            Console.WriteLine("========================================");
+            Console.WriteLine("========================================================");
             return;
         }
 
@@ -231,12 +231,12 @@ class Program
             CartItem item = cart[i];
             double subtotal = item.Product.Price * item.Quantity;
 
-            Console.WriteLine(item.Product.Name + "\t x" + item.Quantity + "\t PHP " + item.Product.Price.ToString("F2") + "\t Subtotal: PHP " + subtotal.ToString("F2"));
+            Console.WriteLine(item.Product.Name.PadRight(12) + ("x" + item.Quantity).PadRight(6) + ("PHP " + item.Product.Price.ToString("F2")).PadRight(16) + "Subtotal: PHP " + subtotal.ToString("F2"));
 
             grandTotal = grandTotal + subtotal;
         }
 
-        Console.WriteLine("----------------------------------------");
+        Console.WriteLine("--------------------------------------------------------");
         Console.WriteLine("Grand Total:    PHP " + grandTotal.ToString("F2"));
 
         if (grandTotal >= 5000)
@@ -245,23 +245,23 @@ class Program
             double finalTotal     = grandTotal - discountAmount;
 
             Console.WriteLine("Discount (10%): PHP " + discountAmount.ToString("F2"));
-            Console.WriteLine("========================================");
+            Console.WriteLine("========================================================");
             Console.WriteLine("FINAL TOTAL:    PHP " + finalTotal.ToString("F2"));
         }
         else
         {
-            Console.WriteLine("========================================");
+            Console.WriteLine("========================================================");
             Console.WriteLine("FINAL TOTAL:    PHP " + grandTotal.ToString("F2"));
         }
 
-        Console.WriteLine("======== Updated Remaining Stock ======");
+        Console.WriteLine("========= Updated Remaining Stock ===========");
 
         for (int i = 0; i < menu.Length; i++)
         {
             menu[i].DisplayProduct();
         }
 
-        Console.WriteLine("========================================");
+        Console.WriteLine("=============================================");
         Console.WriteLine("\nThank you for shopping! Press any key to exit.");
         Console.ReadKey();
     }
