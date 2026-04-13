@@ -253,5 +253,16 @@ class Program
             Console.WriteLine("========================================");
             Console.WriteLine("FINAL TOTAL:    PHP " + grandTotal.ToString("F2"));
         }
+
+        Console.WriteLine("======== Updated Remaining Stock ======");
+
+        for (int i = 0; i < menu.Length; i++)
+        {
+            menu[i].DisplayProduct();
+        }
+
+        Console.WriteLine("========================================");
+        Console.WriteLine("\nThank you for shopping! Press any key to exit.");
+        Console.ReadKey();
     }
 }
