@@ -31,7 +31,8 @@ class Product
 
     public double GetItemTotal(int quantity)
     {
-        return Price * quantity;
+        double total = Price * quantity;
+        return total;
     }
 
     public bool HasEnoughStock(int quantity)
