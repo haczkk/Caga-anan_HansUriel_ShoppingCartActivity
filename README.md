@@ -14,6 +14,8 @@ PROGRESS:
 
 • Added fixed-sized array to hold cart items.
 
+• Added main shopping loop, menu display, and product selection with validation.
+
 AI USAGE IN THIS PROJECT:
 
 • “Why am I getting an error with my variable not being declared?"
