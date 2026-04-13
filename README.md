@@ -8,4 +8,6 @@ PROGRESS:
 
 • Removed organized formatting as it looks complicated.
 
+• Made changes in the syntax of requirements.
+
 AI USAGE IN THIS PROJECT:
