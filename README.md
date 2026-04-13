@@ -4,8 +4,6 @@
 
 • Used a constructor for ease of data storing.
 
-• Removed organized formatting as it looks complicated.
-
 • Made changes in the syntax of requirements.
 
 • Added cart logic.
@@ -27,6 +25,8 @@
 • Finalized the displayed updated stocks after purchase.
 
 • Added the final message.
+
+• Fixed the alignment of displayed messages.
 
 • Shopping Cart System Finished.
 
