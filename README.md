@@ -17,3 +17,5 @@ PROGRESS:
 AI USAGE IN THIS PROJECT:
 
 • “Why am I getting an error with my variable not being declared?"
+
+• “How do I validate user input in C# using int.TryParse to avoid errors?”
