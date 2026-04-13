@@ -2,10 +2,10 @@
 
 class Product
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public double Price { get; set; }
-    public int RemainingStock { get; set; }
+    public int Id;
+    public string Name;
+    public double Price;
+    public int RemainingStock;
 
     public Product(int id, string name, double price, int remainingStock)
     {
