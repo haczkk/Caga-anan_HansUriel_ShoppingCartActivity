@@ -173,6 +173,25 @@ class Program
                     break;
                 }
             }
+
+            int totalQuantityWanted;
+
+           if (existingIndex >= 0)
+           {
+               totalQuantityWanted = cart[existingIndex].Quantity + quantity;
+           }
+           else
+           {
+               totalQuantityWanted = 0;
+           }
+
+           if (selectedProduct.HasEnoughStock(totalQuantityWanted) == false)
+           {
+               Console.WriteLine("Not enough stock available. Only " + selectedProduct.RemainingStock + " left.");
+               Console.WriteLine("Press any key to try again...");
+               Console.ReadKey();
+               continue;
+           }
         }
     }
 }
