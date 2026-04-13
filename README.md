@@ -22,6 +22,8 @@
 
 • Finalized the receipt generation.
 
+• Added discount check logic.
+
 # Ai Usage in This Project
 
 • “Why am I getting an error with my variable not being declared?"
