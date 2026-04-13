@@ -32,7 +32,7 @@
 
 # Problem
 
-• Encountered a problem with negative stocks.
+• Encountered a problem with negative stocks where you could still buy even if the stock is less than you would purchase.
 
 # Ai Usage in This Project
 
