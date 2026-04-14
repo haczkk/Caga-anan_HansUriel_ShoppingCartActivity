@@ -50,4 +50,4 @@
 
 • “How do I prevent users from entering negative or zero values in C#?”
 
-    – For adding conditional checks (e.g., quantity <= 0) to apply valid input.
+    – For adding conditional checks to apply valid input.
