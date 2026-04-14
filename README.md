@@ -43,6 +43,7 @@
 – Used it to determine errors when it comes to properly declaring variables, which I applied throughout my program.
 
 
+
 • “How do I validate user input in C# using int.TryParse to avoid errors?”
 
 – For implementing input validation using int.TryParse, ensuring that invalid inputs do not crash the program.
