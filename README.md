@@ -37,6 +37,7 @@
 # AI Usage in This Project
 
 • “Why am I getting an error with my variable not being declared?"
+  - Used it to determine errors when it comes to properly declaring variables, which I applied throughout my program.
 
 • “How do I validate user input in C# using int.TryParse to avoid errors?”
 
