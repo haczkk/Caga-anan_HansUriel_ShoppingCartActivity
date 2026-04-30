@@ -64,6 +64,10 @@
 
 • Added the function to update item quantity in cart.
 
+• Added the function to remove items from cart.
+
+• Added a visual where it displays cart items before selecting removal.
+
 # Problem
 
 • Encountered a problem with not properly declared variables. (SOLVED)
