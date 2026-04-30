@@ -78,6 +78,8 @@
 
 • Added the function to trigger Low Stock Alert.
 
+• Added the Order History Display system.
+
 # Problem
 
 • Encountered a problem with not properly declared variables. (SOLVED)
