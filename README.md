@@ -70,6 +70,12 @@
 
 • Added the function to clear cart items.
 
+• Added the Checkout Summary function.
+
+• Implemented the Receipt generation with full transaction data.
+
+• Added the feature that checks inventory after purchase to trigger Low Stock Alert.
+
 # Problem
 
 • Encountered a problem with not properly declared variables. (SOLVED)
