@@ -71,5 +71,68 @@ namespace ShoppingCartSystem
             Console.WriteLine("╚══════════════════════════════════════╝");
             Console.Write("\nEnter your choice: ");
         }
+
+        static void ShoppingLoop()
+        {
+            bool shopping = true;
+
+            while (shopping)
+            {
+                Console.Clear();
+                PrintDivider('=', 62);
+                Console.WriteLine(CenterText("PRODUCT CATALOG", 62));
+                PrintDivider('=', 62);
+
+                Console.WriteLine(" " + "ID".PadRight(5) + "Name".PadRight(15) + "Price".PadRight(16) + "Stock".PadRight(16) + "Category");
+                PrintDivider('-', 62);
+
+                for (int i = 0; i < menu.Length; i++)
+                {
+                    menu[i].DisplayProduct();
+                }
+
+                PrintDivider('=', 62);
+                Console.WriteLine(" Cart: " + cartCount + " / " + MAX_CART + " items");
+                PrintDivider('-', 62);
+                Console.WriteLine("  1. Add Item to Cart");
+                Console.WriteLine("  2. Search Product by Name");
+                Console.WriteLine("  3. Filter by Category");
+                Console.WriteLine("  4. Manage Cart (View / Update / Remove / Checkout)");
+                Console.WriteLine("  5. Back to Main Menu");
+                PrintDivider('-', 62);
+                Console.Write("\nEnter your choice: ");
+
+                string choice = Console.ReadLine();
+
+                if (choice == "1")
+                {
+                    AddItemToCart();
+                }
+                else if (choice == "2")
+                {
+                    SearchProduct();
+                }
+                else if (choice == "3")
+                {
+                    FilterByCategory();
+                }
+                else if (choice == "4")
+                {
+                    bool checkoutDone = CartMenu();
+                    if (checkoutDone)
+                        shopping = false;
+                }
+                else if (choice == "5")
+                {
+                    shopping = false;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nInvalid choice. Please enter 1 to 5.");
+                    PressAnyKey();
+                }
+            }
+        }
     }
 }
