@@ -84,6 +84,6 @@
 
     - Helped me with formatting issues during the development of this program. More likely for future changes on this project as well.
 
-• "How do I separate my shopping system features into methods like to make my code cleaner and easier to maintain?"
+• "How do I separate my shopping system features into methods to make my code cleaner and easier to maintain?"
 
     - Used this prompt as a guide to help me separate the methods that i used and will use in this project.
