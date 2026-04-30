@@ -56,6 +56,8 @@
 
 • Implemented a logic where it finds a product even if only part of the name is entered.
 
+• Finalized the Category Filtering System (with added "Show All" option).
+
 # Problem
 
 • Encountered a problem with not properly declared variables. (SOLVED)
