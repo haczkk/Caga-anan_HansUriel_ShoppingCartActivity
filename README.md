@@ -68,6 +68,8 @@
 
 • Added a visual where it displays cart items before selecting removal.
 
+• Added the function to clear cart items.
+
 # Problem
 
 • Encountered a problem with not properly declared variables. (SOLVED)
