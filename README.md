@@ -48,9 +48,13 @@
 
 • Added the product catalog menu and shopping navigation.
 
-• Finalized the method that adds items to the cart.
+• Finalized the function that adds items to the cart.
 
-• Implemented the Product Catalog Display, Control of Cart Capacity, Product Selection Validation, Cancel Option, Product ID Range Validation, Stock Availability Validation, Quantity Validation, Prevention of Duplicate Cart Entries, Merging of Quantity Logic, Stock Deduction System, and Price Calculation to the AddItemToCart() method.
+• Implemented the Product Catalog Display, Control of Cart Capacity, Product Selection Validation, Cancel Option, Product ID Range Validation, Stock Availability Validation, Quantity Validation, Prevention of Duplicate Cart Entries, Merging of Quantity Logic, Stock Deduction System, and Price Calculation to the AddItemToCart() function.
+
+• Added the Search Product system.
+
+• Implemented a logic where it finds a product even if only part of the name is entered.
 
 # Problem
 
@@ -95,3 +99,7 @@
 • "When is the correct point to deduct product stock so inventory stays accurate and only updates after a successful add?"
 
     - Used it for maintaining accurate inventory after adding items.
+
+• "I want to improve the search so users can find products even if they only type part of the product name. What would work best for partial matching?"
+
+    - Used it to improve product search flexibility.
