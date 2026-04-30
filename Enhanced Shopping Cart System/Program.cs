@@ -313,5 +313,74 @@ namespace ShoppingCartSystem
 
             PressAnyKey();
         }
+
+        static bool CartMenu()
+        {
+            bool inMenu       = true;
+            bool didCheckout  = false;
+
+            while (inMenu)
+            {
+                Console.Clear();
+                PrintDivider('=', 46);
+                Console.WriteLine(CenterText("CART MANAGEMENT", 46));
+                PrintDivider('=', 46);
+                Console.WriteLine("  1. View Cart");
+                Console.WriteLine("  2. Update Item Quantity");
+                Console.WriteLine("  3. Remove Item from Cart");
+                Console.WriteLine("  4. Clear Cart");
+                Console.WriteLine("  5. Proceed to Checkout");
+                Console.WriteLine("  6. Back to Shopping");
+                PrintDivider('-', 46);
+                Console.Write("\nEnter your choice: ");
+
+                string choice = Console.ReadLine();
+
+                if (choice == "1")
+                {
+                    ViewCart();
+                    PressAnyKey();
+                }
+                else if (choice == "2")
+                {
+                    UpdateCartItem();
+                }
+                else if (choice == "3")
+                {
+                    RemoveCartItem();
+                }
+                else if (choice == "4")
+                {
+                    ClearCart();
+                }
+                else if (choice == "5")
+                {
+                    if (cartCount == 0)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\nYour cart is empty. Please add items first.");
+                        PressAnyKey();
+                    }
+                    else
+                    {
+                        Checkout();
+                        didCheckout = true;
+                        inMenu      = false;
+                    }
+                }
+                else if (choice == "6")
+                {
+                    inMenu = false;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\nInvalid choice. Please enter 1 to 6.");
+                    PressAnyKey();
+                }
+            }
+
+            return didCheckout;
+        }
     }
 }
