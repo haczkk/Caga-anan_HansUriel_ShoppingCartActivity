@@ -1,6 +1,5 @@
-# 🧱 ShoppingCartSystem (Base Version)
+# ShoppingCartSystem (Base Version)
 
-## ✅ Completed Features
 - Completed the requirements for the project (`Product` class, Fields, and Methods)
 - Used a constructor for ease of data storing
 - Made changes in the syntax of requirements
@@ -19,9 +18,8 @@
 
 ---
 
-# 🚀 EnhancedShoppingCartSystem (Improved Version)
+# EnhancedShoppingCartSystem (Improved Version)
 
-## ✅ Completed Features
 - Made the Y/N validation stronger
 - Separated the classes into different source code files
 - Added a `Category` field to the `Product.cs`
@@ -51,7 +49,7 @@
 
 ---
 
-# ⚠️ Problems Encountered
+# Problems Encountered
 - Encountered a problem with not properly declared variables. (SOLVED)
 - Encountered a problem with negative stocks where you could still buy even if the stock is less than you would purchase. (SOLVED)
 - Encountered a problem with Y/N validation where it accepts any input except "Y" instead of "Y" and "N" only. (SOLVED)
@@ -61,7 +59,7 @@
 
 ---
 
-# 🤖 AI Usage in This Project
+# AI Usage in This Project
 
 • “Why am I getting an error with my variable not being declared?"
 
