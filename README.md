@@ -58,7 +58,7 @@
 
 • "The code keeps Product, CartItem, and Program in a single Program.cs file." (SOLVED)
 
-• "All shopping features were originally inside one large method." (NOT YET SOLVED)
+• All shopping features were originally inside one large method. (NOT YET SOLVED)
 
 # AI Usage in This Project
 
