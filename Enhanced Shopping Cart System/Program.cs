@@ -382,5 +382,50 @@ namespace ShoppingCartSystem
 
             return didCheckout;
         }
+
+        static void ViewCart()
+        {
+            Console.Clear();
+            PrintDivider('=', 62);
+            Console.WriteLine(CenterText("YOUR CART", 62));
+            PrintDivider('=', 62);
+
+            if (cartCount == 0)
+            {
+                Console.WriteLine("  Your cart is empty.");
+                PrintDivider('=', 62);
+                return;
+            }
+
+            Console.WriteLine("  " + "#".PadRight(4) + "Product".PadRight(15) + "Price".PadRight(14) + "Qty".PadRight(6) + "Subtotal");
+            PrintDivider('-', 62);
+
+            double runningTotal = 0;
+
+            for (int i = 0; i < cartCount; i++)
+            {
+                CartItem item     = cart[i];
+                double   subtotal = item.Product.Price * item.Quantity;
+                runningTotal     += subtotal;
+
+                Console.WriteLine("  " + (i + 1 + ".").PadRight(4) + item.Product.Name.PadRight(15) + ("PHP " + item.Product.Price.ToString("F2")).PadRight(14) + ("x" + item.Quantity).PadRight(6) + "PHP " + subtotal.ToString("F2"));
+            }
+
+            PrintDivider('-', 62);
+
+            double possibleDiscount = (runningTotal >= DISCOUNT_MIN)
+                ? runningTotal * DISCOUNT_RATE
+                : 0;
+
+            Console.WriteLine("  Cart Total   : PHP " + runningTotal.ToString("F2") + "  (" + cartCount + " item(s))");
+
+            if (possibleDiscount > 0)
+            {
+                Console.WriteLine("  Discount 10% : PHP " + possibleDiscount.ToString("F2") + "  (applies at checkout)");
+                Console.WriteLine("  Est. Final   : PHP " + (runningTotal - possibleDiscount).ToString("F2"));
+            }
+ 
+            PrintDivider('=', 62);
+        }
     }
 }
