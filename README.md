@@ -50,7 +50,7 @@
 
 • Finalized the function that adds items to the cart.
 
-• Implemented the Product Catalog Display, Control of Cart Capacity, Product Selection Validation, Cancel Option, Product ID Range Validation, Stock Availability Validation, Quantity Validation, Prevention of Duplicate Cart Entries, Merging of Quantity Logic, Stock Deduction System, and Price Calculation to the AddItemToCart() function.
+• Implemented input validations and cart logics to the AddItemToCart() function.
 
 • Added the Search Product system.
 
