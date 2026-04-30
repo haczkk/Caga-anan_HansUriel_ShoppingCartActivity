@@ -134,5 +134,112 @@ namespace ShoppingCartSystem
                 }
             }
         }
+
+        static void AddItemToCart()
+        {
+            Console.Clear();
+            PrintDivider('=', 62);
+            Console.WriteLine(CenterText("ADD ITEM TO CART", 62));
+            PrintDivider('=', 62);
+
+            Console.WriteLine(" " + "ID".PadRight(5) + "Name".PadRight(15) + "Price".PadRight(16) + "Stock".PadRight(16) + "Category");
+            PrintDivider('-', 62);
+            for (int i = 0; i < menu.Length; i++)
+                menu[i].DisplayProduct();
+            PrintDivider('=', 62);
+
+            if (cartCount == MAX_CART)
+            {
+                Console.Clear();
+                Console.WriteLine("\nYour cart is full (" + MAX_CART + " items max).");
+                Console.WriteLine("Please remove an item before adding more.");
+                PressAnyKey();
+                return;
+            }
+
+            Console.Write("\nEnter product number to add (or 0 to cancel): ");
+            string productInput = Console.ReadLine();
+
+            int productId;
+            if (!int.TryParse(productInput, out productId))
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid input. Please enter a number.");
+                PressAnyKey();
+                return;
+            }
+
+            if (productId == 0) return;
+
+            if (productId < 1 || productId > menu.Length)
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid product number. Choose from 1 to " + menu.Length + ".");
+                PressAnyKey();
+                return;
+            }
+
+            Product selected = menu[productId - 1];
+
+            if (selected.RemainingStock == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("Sorry, '" + selected.Name + "' is out of stock.");
+                PressAnyKey();
+                return;
+            }
+
+            Console.Write("Enter quantity for " + selected.Name + " (available: " + selected.RemainingStock + "): ");
+            string quantityInput = Console.ReadLine();
+
+            int quantity;
+            if (!int.TryParse(quantityInput, out quantity))
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid input. Please enter a whole number.");
+                PressAnyKey();
+                return;
+            }
+
+            if (quantity <= 0)
+            {
+                Console.Clear();
+                Console.WriteLine("Quantity must be at least 1.");
+                PressAnyKey();
+                return;
+            }
+
+            int existingIndex = FindInCart(selected.Id);
+
+            int totalWanted = (existingIndex >= 0)
+                ? cart[existingIndex].Quantity + quantity
+                : quantity;
+
+            if (!selected.HasEnoughStock(totalWanted))
+            {
+                Console.Clear();
+                Console.WriteLine("Not enough stock. Only " + selected.RemainingStock + " available.");
+                PressAnyKey();
+                return;
+            }
+
+            if (existingIndex >= 0)
+            {
+                cart[existingIndex].Quantity += quantity;
+                selected.DeductStock(quantity);
+
+                Console.WriteLine("\nCart updated: " + selected.Name + " quantity is now " + cart[existingIndex].Quantity + ".");
+            }
+            else
+            {
+                cart[cartCount] = new CartItem(selected, quantity);
+                cartCount++;
+                selected.DeductStock(quantity);
+ 
+                Console.WriteLine("\nAdded to cart: " + selected.Name + " x" + quantity + " = PHP " + selected.GetItemTotal(quantity).ToString("F2"));
+            }
+
+            PressAnyKey();
+        }
     }
 }
