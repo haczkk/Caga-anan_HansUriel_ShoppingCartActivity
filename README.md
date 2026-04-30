@@ -61,34 +61,34 @@
 
 # AI Usage in This Project
 
-• “Why am I getting an error with my variable not being declared?"
+- “Why am I getting an error with my variable not being declared?"
 
-    – Used it to determine errors when it comes to properly declaring variables, which I applied throughout my program.  
+    - Used it to determine errors when it comes to properly declaring variables, which I applied throughout my program.  
     
-• “How do I validate user input in C# using int.TryParse to avoid errors?”
+- “How do I validate user input in C# using `int.TryParse` to avoid errors?”
 
-    – For implementing input validation using int.TryParse, ensuring that invalid inputs do not crash the program.
+    - For implementing input validation using int.TryParse, ensuring that invalid inputs do not crash the program.
 
-• “How do I prevent users from entering negative or zero values in C#?”
+- “How do I prevent users from entering negative or zero values in C#?”
 
-    – For adding conditional checks to apply valid input.
+    - For adding conditional checks to apply valid input.
 
-• "Explain how separation of files when classes work in C#. Make it beginner-friendly."
+- "Explain how separation of files when classes work in C#. Make it beginner-friendly."
 
     - Used it as a guide for addressing my problem with classes being in the same source code.
 
-• "What functions can I use to cleanly format the output in C#?"
+- "What functions can I use to cleanly format the output in C#?"
 
     - Helped me with formatting issues during the development of this program. More likely for future changes on this project as well.
 
-• "How do I separate my shopping system features into methods to make my code cleaner and easier to maintain?"
+- "How do I separate my shopping system features into methods to make my code cleaner and easier to maintain?"
 
     - Used this prompt as a guide to help me separate the methods that i used and will use in this project.
 
-• "When is the correct point to deduct product stock so inventory stays accurate and only updates after a successful add?"
+- "When is the correct point to deduct product stock so inventory stays accurate and only updates after a successful add?"
 
     - Used it for maintaining accurate inventory after adding items.
 
-• "I want to improve the search so users can find products even if they only type part of the product name. What would work best for partial matching?"
+- "I want to improve the search so users can find products even if they only type part of the product name. What would work best for partial matching?"
 
     - Used it to improve product search flexibility.
