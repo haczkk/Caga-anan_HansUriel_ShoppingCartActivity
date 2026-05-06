@@ -43,5 +43,10 @@ namespace ShoppingCartSystem
         {
             RemainingStock -= quantity;
         }
+
+        public void Restock(int quantity)
+        {
+            RemainingStock += quantity;
+        }
     }
 }
