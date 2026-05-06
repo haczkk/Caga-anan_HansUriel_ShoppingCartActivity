@@ -2,15 +2,15 @@ namespace ShoppingCartSystem
 {
     public class Receipt
     {
-        public string ReceiptNumber;
-        public string DateAndTime;
-        public CartItem[] Items;
-        public int ItemCount;
-        public double GrandTotal;
-        public double DiscountAmount;
-        public double FinalTotal;
-        public double Payment;
-        public double Change;
+        public string ReceiptNumber { get; private set; }
+        public string DateAndTime { get; private set; }
+        public CartItem[] Items { get; private set; }
+        public int ItemCount { get; private set; }
+        public double GrandTotal { get; private set; }
+        public double DiscountAmount { get; private set; }
+        public double FinalTotal { get; private set; }
+        public double Payment { get; private set; }
+        public double Change { get; private set; }
 
         public Receipt(
             string receiptNumber,
