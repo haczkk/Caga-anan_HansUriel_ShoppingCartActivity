@@ -2,11 +2,11 @@ namespace ShoppingCartSystem
 {
     public class Product
     {
-        public int Id;
-        public string Name;
-        public double Price;
-        public int RemainingStock;
-        public string Category;
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+        public double Price { get; private set; }
+        public int RemainingStock { get; set; }
+        public string Category { get; private set; }
 
         public Product(int id, string name, double price, int remainingStock, string category)
         {
